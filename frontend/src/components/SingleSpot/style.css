@@ -1,0 +1,159 @@
+.detail-page {
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  margin: 40px;
+  margin-left: 50px;
+  margin-right: 80px;
+    /* max-width: 800px; */
+  }
+  
+  .spot-header {
+    margin-bottom: 20px;
+  }
+  
+  .spot-name {
+    font-size: 32px;
+    font-weight: bold;
+
+    margin: 0;
+  }
+  
+  .spot-location {
+    color: #7c788e;
+
+    margin: 0;
+  }
+  
+  .spot-images {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 20px;
+  }
+  
+  .preview-image img {
+    width: 500px;
+ height: 420px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .smaller-images-1 img {
+    display: flex;
+    flex-direction: row;
+    width: 300px;
+    height: 200px;
+    margin-left: 20px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .spot-host h1 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: bold;
+  }
+
+  .spot-body {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-bottom: 5px solid #2b324a;
+    padding-bottom: 20px;
+    margin-top: 12px;
+  }
+  
+  .description {
+    display: flex;
+    font-size: 20px;
+    margin-right: 30px;
+  }
+  
+  .callout-box {
+    border: solid black;
+    border-radius: 5px;
+    width: 500px;
+    padding: 10px;
+  margin-bottom: auto;
+    margin-left: auto;
+    display: flex;
+    flex-direction:column;
+  }
+  
+  
+  
+  .callout-description {
+    flex: 1;
+    padding-right: 50px;
+  }
+  
+  .callout-content {
+ 
+  display: flex;
+  flex-direction: row;
+  
+  }
+  .callout-price {
+    align-self: flex-start;
+    width: 200px;
+  }
+  
+  .callout-price h2 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    
+  }
+  
+  .callout-reviews {
+    color: #7c788e;
+    align-self: flex-start;
+text-align: center;    
+font-size: 14px;
+  }
+  
+  .callout-reserve button {
+
+    padding: 10px 20px;
+    background-color: #2b324a;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .review-section {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0px; /* Add margin-bottom to control the spacing between review sections */
+  }
+  
+  .user-review {
+    font-size: 22px;
+    font-weight: bold;
+    color: #2b324a;
+    margin-bottom: -20px; 
+  }
+  
+  .review-date{
+    font-size: 15px;
+    font-weight: bold;
+  }
+  .spot-review {
+    font-size: 13;
+    margin-top: -10px;
+
+  }
+
+
+
+  /* {reviews?.length === 0 ? <p>Be the first to post a review</p> : reviews?.reverse().map(review => (
+    <div className="review-section" key={review.id}>
+        <h4 className="user-review">{review.User?.firstName} {review.User?.lastName}</h4>
+        <h5 className="review-date">{convertDate(review.createdAt)}</h5>
+        <p className="spot-review">{review.review}</p>
+    </div>
+))} */

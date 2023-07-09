@@ -1,0 +1,55 @@
+.delete-modal {
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
+  background-color: #ffffff;
+  border-radius: 5px;
+  padding: 20px;
+  max-width: 370px;
+  margin: 0 auto;
+}
+
+.delete-message {
+  margin-bottom: 20px;
+}
+
+.delete-message h1 {
+  font-size: 25px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.delete-message p {
+  font-size: 16px;
+  text-align: center;
+}
+
+
+.delete-button-modal {
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
+    background-color: #2b324a;
+    color: #ffffff;
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.delete-button-yes {
+  background-color: #8d2216;
+  color: #fff;
+  font-weight: bold;
+  padding: 10px;
+  border-radius: 5px;
+  margin-top: 10px;
+  margin-left: 55px;
+}
+
+.delete-button-no {
+  background-color: #404346;
+  color: #fff; color: #fff;
+  font-weight: bold;
+  padding: 10px;
+  border-radius: 5px;
+  margin-top: 10px;
+}

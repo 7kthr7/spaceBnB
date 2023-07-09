@@ -1,0 +1,120 @@
+.get-spots {
+    display: flex;
+    flex-wrap: wrap;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
+  }
+  
+  .landing-page {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    cursor: pointer;
+    margin-right: 30px;
+    margin-left: 20px;
+    margin-top: 50px;
+  }
+  
+  .card-details {
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    margin-left: 45px;
+    border-radius: 30px;
+    margin-top: -40px;
+    margin-right: 0px;
+    margin-bottom: 20px;
+  }
+  
+
+
+  .card-detail {
+display: flex;
+margin-right: 50px;
+margin-top: -40px;
+  }
+  
+
+
+  .card-details button {
+  background-color: #290930;
+  color: #ffffff;
+  font-weight: bold;
+  padding: 10px;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+  
+  .user-spot-detail {
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+    margin-right: 10px;
+    justify-content: space-between;
+    margin-top: 0px;
+
+  }
+
+  .manage-page h1{
+    text-align: center;
+    justify-self: center;
+
+  }
+
+
+
+ NavLink, .new-spot-btn {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
+    background-color: #909abb;
+    color: #ffffff;
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 10px;
+    text-decoration: none;
+  }
+
+  .manage-spots-buttons{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
+    background-color: #2b324a;
+    color: #ffffff;
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 10px;
+  }
+  
+  .update-button{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
+    background-color: #2b324a;
+    color: #ffffff;
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 10px;
+  }
+
+
+  
+  .update-button a {
+    color: #ffffff;
+    text-decoration: none;
+  }
+  
+  .open-modal-button {
+    background-color: #290930;
+    color: #ffffff;
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 10px;
+  }
+  
+  .open-modal-button a {
+    color: #ffffff;
+    text-decoration: none;
+  }
+  

@@ -1,0 +1,144 @@
+.user-icon-div {
+  display: flex;
+  position: relative;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100px;
+  
+}
+
+
+
+.user-icon {
+  background-color: #ffffff;
+  color:#1e253ee9;
+  cursor: pointer;
+  font-size: 30px;
+  margin-bottom: 0;
+  border-radius: 20px;
+  border: 2px solid #201842;
+}
+
+.user-icon:hover {
+  color:#3b5579ee;
+  transition: ease-in .3s;
+}
+
+.user-bars-div {
+  display: flex;
+  padding: 5px;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.profile-dropdown {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+background-color: white;
+  border-radius: 12px;
+  margin: 8px;
+  top: 50px;
+  right: 0px;
+  list-style: none;
+  position: absolute;
+  min-width: 120px;
+  width: 150px;
+  height: fit-content;
+}
+
+
+/* .user-actions {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  height: inherit;
+  width: 100%;
+  font-size: 14px;
+  transition-property: all;
+  font-family: monospace;
+} */
+
+/* .dropdown-menu {
+  width: 100%;
+  height: inherit;
+} */
+ .logout-btn, .manage-spot-btn {
+  border: 1px solid rgb(233, 230, 237);
+  margin-top: 5px;
+}
+
+.login-signup{
+  text-align: left;
+  height: inherit;
+  width: 100%;
+  margin-left: 50px;
+  font-size: 14px;
+  cursor: pointer;
+  transition-property: all;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+
+
+
+#user-email, .user-actions{
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+text-align: center;
+margin-bottom: 0px;
+font-size: 14px;
+font-weight: bold;
+
+}
+
+#spots-button{
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 14px;
+  font-weight: bold;
+  border: 1px, solid, rgb(237, 234, 227);
+}
+/* 
+#demouser-button {
+  margin-top: 5px;
+  height: 100%;
+  display: flex;
+  font-family: monospace;
+  color: purple;
+  font-weight: bold;
+  justify-content: center;
+  border-radius: 20px;
+  border-color: purple;
+} */
+
+/* #demouser-button:hover {
+  background-color: rgba(165, 165, 165, 0.1);
+} */
+
+
+
+
+ #logout-button {
+  /* margin-top: 5px;
+  height: 100%;
+  display: flex;
+  font-family: monospace;
+  color:#1e253ee9;
+  font-weight: bold;
+text-align: start; */
+margin-bottom: 10px;
+text-align: left;
+height: inherit;
+width: 100%;
+font-size: 14px;
+cursor: pointer;
+font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+font-weight: lighter;
+
+border-bottom: 2px solid rgba(165, 165, 165, 0.2);
+
+
+}

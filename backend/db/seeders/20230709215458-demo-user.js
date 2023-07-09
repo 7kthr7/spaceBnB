@@ -17,14 +17,14 @@ module.exports = {
        
         {
           firstName: "Jeff",
-          lastName: "Bezos |||",
+          lastName: "Bezos",
           email: "BezosDaThird@gmail.com",
-          username: "DaBetter_Bezos",
+          username: "DaBetterBezos",
           hashedPassword: bcrypt.hashSync("password1"),
         },
         {
           firstName: "Elon",
-          lastName: "Musk |||",
+          lastName: "Musk",
           email: "MuskDaThird@gmail.com",
           username: "MuskDaGoat",
           hashedPassword: bcrypt.hashSync("password2"),
@@ -33,7 +33,7 @@ module.exports = {
           firstName: "Zhang",
           lastName: "Yiming",
           email: "YimingDaThirde@gmail.com",
-          username: "Za_Zhang",
+          username: "ZaZhang",
           hashedPassword: bcrypt.hashSync("password3"),
         },
         {
@@ -54,7 +54,7 @@ module.exports = {
     return queryInterface.bulkDelete(
       options,
       {
-        username: { [Op.in]: ["DaBetter_Bezos", "MuskDaGoat", "Za_Zhang", "Demo_G"] },
+        username: { [Op.in]: [ "Demo_G"] },
       },
       {}
     );

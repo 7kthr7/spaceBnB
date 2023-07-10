@@ -49,19 +49,22 @@ label {
 
 
 .submit-button:hover {
-    background-color: #6687b4ee;
     transition: ease-in 1;
+    box-shadow: 5px 8px 4px rgba(95, 136, 199, 0.8);
 }
 
+
 .login-button {
-    background-color: #6687b4ee;
+    background-color: #2b324afa;
     width: 102%;
     border: none;
     border-radius: 5px;
+    box-shadow: 5px 8px 4px rgba(95, 136, 199, 0.7);
     height: 50px;
     color: #ffffff;
     font-weight: bold;
     margin-bottom: 20px;
+    cursor: pointer;
 
 }
 

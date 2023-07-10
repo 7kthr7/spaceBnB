@@ -20,16 +20,18 @@ export default function UserSpot() {
 
     return (
         <>
-            <h1 className="manage-page">Manage Your Spot</h1>
+            <h1 className="manage-page">Manage Spots</h1>
 
             <div className="get-spots">
                 <div className="landing-page">
 
                     <div className="card-detail">
                         {!spots.length && (
-                            <button className="new-spot-btn">
-                                <NavLink exact to="/spots/new">Create a New Spot</NavLink>
+                            <NavLink exact to="/spots/new">
+                            <button className="new-spot-btn">Create a New Spot
+                                
                             </button>
+                            </NavLink>
                         )}
                         {spots.length > 0 &&
                             spots.map((spot) => (
@@ -43,7 +45,12 @@ export default function UserSpot() {
                                             </NavLink>
                                         </button>
 
-                                        <OpenModalButton className="del-but" buttonText="Delete" modalComponent={<DeleteSpot spot={spot} />} />
+                                        <button id="delete-button"> Delete
+
+                                        <OpenModalButton  
+                                        
+                                        modalComponent={<DeleteSpot spot={spot} />} />
+                                        </button>
 
                                     </div>
                                 </div>

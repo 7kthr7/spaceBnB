@@ -32,10 +32,12 @@ const SpotCard = ({ spot }) => {
                     <p className="card-location">{spot.city}, {spot.state}</p>
                     <p className="card-rating"><i className="fa fa-star gold"></i> {rating(spot.avgStarRating)} </p>
                 </div>
-                <p className="card-price">${spot.price} night</p>
+                <p className="card-price">${spot.price}<span className="night-text"> night</span></p>
             </div>
         </div>
     )
 }
 
 export default SpotCard;
+
+

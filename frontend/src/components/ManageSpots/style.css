@@ -15,56 +15,41 @@
     margin-top: 50px;
   }
   
-  .card-details {
-    display: flex;
-    flex-direction: column;
-    width: 200px;
-    margin-left: 45px;
-    border-radius: 30px;
-    margin-top: -40px;
-    margin-right: 0px;
-    margin-bottom: 20px;
-  }
+
   
 
 
   .card-detail {
 display: flex;
-margin-right: 50px;
-margin-top: -40px;
+
   }
   
 
 
-  .card-details button {
-  background-color: #290930;
-  color: #ffffff;
-  font-weight: bold;
-  padding: 10px;
-  border-radius: 5px;
-  margin-top: 10px;
-}
+
   
   .user-spot-detail {
+
     display: flex;
     flex-direction: column;
     margin-left: 10px;
     margin-right: 10px;
-    justify-content: space-between;
+    justify-content: space-evenly;
     margin-top: 0px;
 
   }
 
-  .manage-page h1{
-    text-align: center;
-    justify-self: center;
+  .manage-page {
+   display: flex;
+   font-size: 30px;
+text-align: center; 
+flex-direction: column;
+}
 
-  }
 
 
-
- NavLink, .new-spot-btn {
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+ .new-spot-btn {
+    /* font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 
     background-color: #909abb;
     color: #ffffff;
@@ -72,37 +57,69 @@ margin-top: -40px;
     padding: 10px;
     border-radius: 5px;
     margin-top: 10px;
-    text-decoration: none;
-  }
-
-  .manage-spots-buttons{
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-
-    background-color: #2b324a;
-    color: #ffffff;
-    font-weight: bold;
-    padding: 10px;
+    text-decoration: none; */
+   background-color: #a8afc5fa;
+    width: 150%;
+    border: none;
     border-radius: 5px;
-    margin-top: 10px;
+    height: 50px;
+    color: #2b324a;
+    font-weight: 700;
+    font-size: 15px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    text-decoration: none;
+    
   }
+
+  .new-spot-btn:hover {
+    background-color: #6687b4ee;
+    transition: ease-in .1s;
+    color:#2b324a ;
+    font-weight: bolder;
+    box-shadow: 2px 2px 2px rgba(2, 20, 48, 0.8);
+
+  }
+
+  .update-button:hover {
+    background-color: #6687b4ee;
+    transition: ease-in .1s;
+    color:#2b324a ;
+    font-weight: bolder;
+    box-shadow: 2px 2px 2px rgba(2, 20, 48, 0.8);
+
+  }
+
+
   
   .update-button{
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-
-    background-color: #2b324a;
-    color: #ffffff;
-    font-weight: bold;
+    background-color: #a8afc5fa;
+    width: 20%;
+    border: none;
+    border-radius: 5px;
+    height: 50px;
+    color: #2b324a;
+    font-weight: 700;
+    font-size: 15px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    text-decoration: none;
     padding: 10px;
+    margin-left: 45px;
+    margin-right: 10px;
     border-radius: 5px;
     margin-top: 10px;
   }
 
 
   
-  .update-button a {
+  .update-button a{
+    
     color: #ffffff;
     text-decoration: none;
   }
+
+  
   
   .open-modal-button {
     background-color: #290930;
@@ -114,6 +131,32 @@ margin-top: -40px;
   }
   
   .open-modal-button a {
+    color: #ffffff;
+    text-decoration: none;
+  }
+
+  
+  #delete-button, .open-modal-button {
+    background-color: #a8afc5fa;
+    width: 20%;
+    border: none;
+    border-radius: 5px;
+    height: 50px;
+    color: #2b324a;
+    font-weight: 700;
+    font-size: 15px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    text-decoration: none;
+    padding: 10px;
+    margin-left: 45px;
+    margin-right: 10px;
+    border-radius: 5px;
+    margin-top: 10px;
+  }
+
+  #delete-button a{
+    
     color: #ffffff;
     text-decoration: none;
   }

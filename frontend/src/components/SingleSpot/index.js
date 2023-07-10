@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
 import { spotDetailThunk } from "../../store/spots";
-//import { getReviewsThunk } from "../../store/reviews";
+import { getReviewsThunk } from "../../store/reviews";
 
 
 
@@ -14,27 +14,27 @@ export default function SingleSpot() {
 
     const spot = useSelector(state => state.spots.singleSpotObj);
     const user = useSelector(state => state.session.user)
-    // const reviews = Object.values(useSelector(state => state.reviews.spot));
-    //const reviews = useSelector((state) => state.reviews.spot)
+    //const reviews = Object.values(useSelector(state => state.reviews.spot));
+    const reviews = useSelector((state) => state.reviews.rev)
     const [hasSubmitted, setHasSubmitted] = useState(false);
 
     useEffect(() => {
         dispatch(spotDetailThunk(params.spotId))
-        //dispatch(getReviewsThunk(params.spotId))
+        dispatch(getReviewsThunk(params.spotId))
     }, [dispatch, params.spotId])
 
-    // const monthNames = ["January", "February", "March", "April", "May", "June",
-    //     "July", "August", "September", "October", "November", "December"
-    // ];
+    const monthNames = ["January", "February", "March", "April", "May", "June",
+        "July", "August", "September", "October", "November", "December"
+    ];
 
-    // const convertDate = (date) => {
-    //     const month = monthNames[new Date(date).getMonth()];
-    //     const year = new Date(date).getFullYear();
+    const convertDate = (date) => {
+        const month = monthNames[new Date(date).getMonth()];
+        const year = new Date(date).getFullYear();
 
-    //     return (
-    //         <p className="reviews-date">{month} {year}</p>
-    //     )
-    // }
+        return (
+            <p className="reviews-date">{month} {year}</p>
+        )
+    }
 
     return (
         <div className="detail-page">
@@ -118,6 +118,44 @@ export default function SingleSpot() {
                 </div>
 
             </div>
+            <div className="spotDetail-reviews">
+            {reviews && (
+            <div>
+                {spot.numReviews === 0 ? (
+                    <div>
+                        <p>Be the first to post a review!</p>
+                    </div>
+                ) : (
+                    <div>
+                        {Object.values(reviews).map((review) => (
+                            review.User && (
+                                <div key={review.id}>
+                                    <div>
+                                        <div>
+                                            <p className="review-user-name">{review.User.firstName}</p>
+                                            <p className="review-date">{convertDate(review.createdAt)}</p>
+                                        </div>
+                                        <p className="review-spots-text">{review.review}</p>
+                                        {user && user.id === review.userId && (
+
+                                            <div>
+                                                {/* <button className="delete-review">
+                                                <OpenModalMenuItem
+                                                    itemText="Delete"
+                                                    modalComponent={<DeleteReviewForm review={review} />}
+                                                />
+                                                </button> */}
+                                            </div>
+                                        )}
+                                    </div>
+                                </div>
+                            )
+                        ))}
+                    </div>
+                )}
+            </div>
+        )}
+    </div>
 
 
             {/* <div className="rating-numReview">
@@ -127,19 +165,19 @@ export default function SingleSpot() {
                     {spot?.numReviews === 1 ? "review" : ""}
                     {spot?.numReviews > 1 ? "reviews" : ""}
                 </h3>
-            </div> */}
+            </div> 
 
 
 
-            {/* {reviews?.length === 0 ? <p>Be the first to post a review</p> : reviews?.reverse().map(review => (
+            {reviews?.length === 0 ? <p>Be the first to post a review</p> : reviews.reverse().map(review => (
                     <div className="review-section" key={review.id}>
-                        <p className="user-review">{review.User?.firstName} {review.User?.lastName}</p>
+                        <p className="user-review">{review.User.firstName} {review.User.lastName}</p>
                         <p className="review-date">{convertDate(review.createdAt)}</p>
                         <p className="spot-review">{review.review}</p>
                     </div>
-                ))} */}
+                ))} 
 
-
+ */}
 
 
 

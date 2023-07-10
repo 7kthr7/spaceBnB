@@ -497,8 +497,13 @@ router.post(
   "/:spotId/reviews",
   validateReview,
   requireAuth,
-  async (req, res) => {
-    const spot = await Spot.findByPk(req.params.spotId);
+  async (req, res, next) => {
+    const { spotId } = req.params;
+    const { review, stars } = req.body
+  
+    const user = req.user;
+    const spot = await Spot.findByPk(spotId);
+  
 
     if (!spot.id) {
       let err = new Error();
@@ -509,8 +514,8 @@ router.post(
 
     const oldReview = await Review.findOne({
       where: {
-        spotId: req.params.spotId,
-        userId: req.user.id,
+        spotId: spotId,
+        userId: user.id,
       },
     });
 
@@ -521,12 +526,10 @@ router.post(
       return res.status(err.statusCode).json(err);
     }
 
-    const { review, stars } = req.body;
-    const newReview = await Review.create({
-      userId: req.user.id,
-      spotId: req.params.spotId,
-      review,
-      stars,
+    const newReview = await spot.createReview({
+      userId: user.id,
+      review: review,
+      stars: stars,
     });
 
     res.status(201).json(newReview);

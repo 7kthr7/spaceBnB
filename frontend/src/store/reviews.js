@@ -1,30 +1,32 @@
 import { csrfFetch } from "./csrf";
+//import { spotDetailThunk } from "./spots";
 
 
 const GET_REVIEWS = 'reviews/GET_REVIEWS';
-const CREATE_REVIEW = 'reviews/CREATE_REVIEWS';
-const DELETE_REVIEW = 'reviews/DELETE_REVIEWS'
+const CREATE_REVIEWS = 'reviews/CREATE_REVIEWS';
+const DELETE_REVIEWS = 'reviews/DELETE_REVIEWS'
 
 //---Action---///
 
-export const getReviewsAction = (reviews) => {
+export const getReviewsAction = (reviews, spotId) => {
     return {
         type: GET_REVIEWS,
-        reviews
+        reviews,
+        spotId
     }
 };
 
 export const createReviewAction = (review, spotId) => {
     return {
-        type: CREATE_REVIEW,
-        spotId,
-        review
+        type: CREATE_REVIEWS,
+        review,
+        spotId
     }
 };
 
 export const deleteReviewAction = (reviewId) => {
     return {
-        type: DELETE_REVIEW,
+        type: DELETE_REVIEWS,
         reviewId
     }
 };
@@ -37,6 +39,8 @@ export const getReviewsThunk = (spotId) => async (dispatch) => {
         const data = await response.json()
         dispatch(getReviewsAction(data.reviews))
         console.log("BRB FETCHING SOME REVIEWS", data)
+        return data
+        
     }
 };
 
@@ -53,15 +57,14 @@ export const createReviewsThunk = (spotId, review) => async (dispatch) => {
     }
 };
 
-
 export const deleteReviewThunk = (reviewId) => async (dispatch) => {
     const response = await csrfFetch(`/api/reviews/${reviewId}`, {
-        method: "DELETE"
+        method: "DELETE",
     })
     if (response.ok) {
         const data = await response.json();
         dispatch(deleteReviewAction(reviewId));
-        return data;
+        return data
     }
 };
 
@@ -74,6 +77,9 @@ const initialState = {
     user: {}
 };
 
+
+  
+
 const reviewsReducer = (state = initialState, action) => {
     switch (action.type) {
 
@@ -84,23 +90,21 @@ const reviewsReducer = (state = initialState, action) => {
             return newState;
         };
 
-        case CREATE_REVIEW: {
-            const newState = { ...state };
-            newState.rev = {
-                ...state.rev,
-                [action.review.id]: action.review,
-            };
-            newState.user = {
-                ...state.user,
-                [action.review.id]: action.review,
-            };
-            return newState;
-        };
+        case CREATE_REVIEWS: {
+            const newState = { ...state }
+            newState.rev = { ...state.rev, [action.review.id]: action.review }
+            newState.user = { ...state.user, [action.review.id]: action.review }
+            console.log("Create Review State", newState);
 
-        case DELETE_REVIEW: {
-            const newState = { ...state };
+            return newState
+
+           
+          }
+
+        case DELETE_REVIEWS: {
+           const  newState = { ...state, rev: { ...state.rev }, user: {} }
+
             delete newState.rev[action.reviewId];
-            delete newState.user[action.reviewId];
             return newState;
         };
         default:

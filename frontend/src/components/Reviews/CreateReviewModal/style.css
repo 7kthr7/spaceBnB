@@ -1,9 +1,9 @@
-.add-review-div {
+.create-review-modal {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 390px;
+    width: 500px;
   }
   
   .review-form {
@@ -64,6 +64,14 @@
     font-weight: bold;
     margin-bottom: 20px;
   }
+  .star-rating i {
+    color: #cde2f3;
+  }
+  .star-rating i:hover {
+    color: #2b324a;
+  }
+
+
   
   .submit-review-button:hover {
     cursor: pointer;

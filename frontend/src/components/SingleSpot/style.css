@@ -104,7 +104,7 @@
   
   .spot-host h1 {
     margin: 0;
-    font-size: 18px;
+    font-size: 22px;
     font-weight: bold;
   }
 
@@ -179,35 +179,56 @@ font-size: 14px;
     cursor: pointer;
   }
   
-  .review-section {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 0px; 
+
+
+  .reviews-user {
+    margin-top: 20px;
+    font-size: 20px;
+    margin-bottom: 0;
+    font-weight: bolder;
   }
-  
-  .user-review {
-    font-size: 22px;
+
+  .reviews-date {
+    font-weight: lighter;
+    margin-top: 2px;
+    color:#2b324ad7 ;
+  }
+
+  .review-content{
+    font-size: 18px;
+    margin-top: -5px;
+  }
+
+.post-review-btn{
+
+  padding: 10px 20px;
+    background-color: #2b324a;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    margin-top: 20px;
     font-weight: bold;
-    color: #2b324a;
-    margin-bottom: -20px; 
-  }
-  
-  .review-date{
-    font-size: 15px;
-    font-weight: bold;
-  }
-  .spot-review {
-    font-size: 13;
-    margin-top: -10px;
+    cursor: pointer;
+}
 
-  }
+.post-review-btn:hover, .callout-reserve button:hover  {
+  transition: ease-in 1;
+  box-shadow: 5px 8px 4px rgba(95, 136, 199, 0.8);
+}
 
+.review-summary {
+  color:#2b324a ;
+}
 
-
-  /* {reviews?.length === 0 ? <p>Be the first to post a review</p> : reviews?.reverse().map(review => (
-    <div className="review-section" key={review.id}>
-        <h4 className="user-review">{review.User?.firstName} {review.User?.lastName}</h4>
-        <h5 className="review-date">{convertDate(review.createdAt)}</h5>
-        <p className="spot-review">{review.review}</p>
-    </div>
-))} */
+.delete-review-button {
+  padding: 10px 20px;
+  background-color: #2b324a;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  margin-top: 20px;
+  font-weight: bold;
+  cursor: pointer;
+}
